@@ -1,0 +1,158 @@
+{
+	"compiler": {
+		"version": "0.8.1+commit.df193b15"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "token_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "beneficiary_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "releaseTime_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "beneficiary",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "release",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "releaseTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "token",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "A token holder contract that will allow a beneficiary to extract the tokens after a given release time. Useful for simple vesting schedules like \"advisors get all of their tokens after 1 year\".",
+			"kind": "dev",
+			"methods": {
+				"beneficiary()": {
+					"returns": {
+						"_0": "the beneficiary of the tokens."
+					}
+				},
+				"releaseTime()": {
+					"returns": {
+						"_0": "the time when the tokens are released."
+					}
+				},
+				"token()": {
+					"returns": {
+						"_0": "the token being held."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"release()": {
+					"notice": "Transfers tokens held by timelock to beneficiary."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Contract_v1.0.0/ChubbyFiveERC20TokenTimeLock.sol": "ChubbyFiveERC20TokenTimeLock"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/npm/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x61437cb513a887a1bbad006e7b1c8b414478427d33de47c5600af3c748f108da",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2c3d0973630ed74f2b5ce3944677a885dc70ec32fc83b35f55045a10224da32b",
+				"dweb:/ipfs/QmbefZ5RoEZKNHXCALfh683PnaNYzKPcKMFjyY1DVAgq8A"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+			"keccak256": "0x98a2884d594fb7a1e1f59efdb44c3e828285e9573525ad5fa7ee09690c629a10",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://623b6d2e7ea8ee476122243f66c6e6a41ce2f5fcb7b073547cc98999f150528b",
+				"dweb:/ipfs/QmRA1PuFuMPua8gGVGaPQReq1oCS2nXVzo2L1o1SKhfyY6"
+			]
+		},
+		".deps/npm/@openzeppelin/contracts/utils/Address.sol": {
+			"keccak256": "0xe57c68ef15a800ed8276055bfa234fb62c4939afee71e63baa35f19b2586edfd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0e988cf63a930e07ad1b55c109347b588dfbd28bd79f23e8f7162901d8f276b5",
+				"dweb:/ipfs/QmZd4D7me8qDHWXhm4NKYFjzQ4bGcC8b4WhPr9B4Rsv6jv"
+			]
+		},
+		"Contract_v1.0.0/ChubbyFiveERC20TokenTimeLock.sol": {
+			"keccak256": "0x36eaeda7c3d5cef854644688ea3c46cea4627a551371a327931adf66b4c304de",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7667ab056bf2f46a7b57da16033acf1523088129c13ef04fc43cebde9137c8bc",
+				"dweb:/ipfs/QmNtyPcjKsxJZngdhrgu2wRvsdR4YBiLWjf8TnZgLVVNhe"
+			]
+		}
+	},
+	"version": 1
+}
